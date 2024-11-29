@@ -1,5 +1,5 @@
 <?php
-
+require_once(__DIR__ . "/../php/_protect.php");
 require_once "../funcoes/Conexao.php";
 require_once "../funcoes/Key.php";
 
@@ -38,8 +38,7 @@ class LoginHandler
 
         if ($dadosCliente->id) {
           // Salva o ID do usuário na sessão
-          session_start();
-          $_SESSION["cod_id"] = $dadosCliente->id;
+          $_SESSION["id"] = $dadosCliente->id;
 
           // Retorna a URL de redirecionamento
           return "controle.php";

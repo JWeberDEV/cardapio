@@ -1,6 +1,3 @@
-<?php
-require_once(__DIR__ . "/../php/protect.php");
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -62,7 +59,6 @@ require_once(__DIR__ . "/../php/protect.php");
     $.post("../master/TrackLogin.php", data)
       .done(response => {
         response = JSON.parse(response);
-        console.log(response.redirect);
         location.href = response.redirect;
       });
   }
